@@ -1002,6 +1002,10 @@ p, span, a, li, input, textarea, select, button {
 @media (max-width: 768px) {
     .section-title { font-size: 2.5rem; }
 
+    .hero-background-image[data-slide="0"] {
+        display: none;
+    }
+
     .portfolio-slider {
         @apply overflow-x-visible px-8;
     }
