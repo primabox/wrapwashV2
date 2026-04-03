@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wash & Wrap</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body class="bg-[#121212] text-white z-2">
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+        <div class="nav-inner">
+            <a href="#" class="nav-logo">
+                <img src="img/logo.png" alt="Wash_Wrap">
+            </a>
+            <div class="nav-actions">
+                <a href="tel:+420603298838" class="nav-phone">
+                    +420 603 298 838
+                </a>
+                <a href="#" class="nav-social">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="nav-social">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="uvod" class="hero-section">
+        <div class="hero-bg">
+            <img src="img/uvodni_foto.jpg" alt="Red Lexus" class="hero-background-image fade-in" data-slide="0">
+            <img src="img/foto2.png" alt="Car Wrapping" class="hero-background-image hero-bg-hidden" data-slide="1">
+            <div class="hero-gradient"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-slides">
+                <div class="hero-slide-content fade-in" data-slide="0">
+                    <h1 class="hero-heading">ZAŽIJTE POCIT</h1>
+                    <h1 class="hero-heading hero-heading--magenta">NOVÉHO VOZU</h1>
+
+                    <div class="hero-bullets">
+                        <div class="hero-bullet">
+                            <img src="img/arrow.svg" class="hero-arrow">
+                            <span>Ruční mytí v Brně</span>
+                        </div>
+                        <div class="hero-bullet">
+                            <img src="img/arrow.svg" class="hero-arrow">
+                            <span>10 let zkušeností</span>
+                        </div>
+                    </div>
+
+                    <p class="hero-description">
+                        Dopřejte svému vozu 
+                        <strong>kompletní péči</strong> od profesionálního ručního<br>
+                        mytí karoserie až po <strong>hloubkové čištění interiéru</strong>.<br>
+                        S <strong>10 letou praxí v Brně</strong> používáme výhradně prémiovou<br>
+                        autokosmetiku, která je šetrná k laku i materiálům.<br>
+                        <strong>Rezervujte si termín, jsme tu pro vás 24/7 online.</strong>
+                    </p>
+                </div>
+                <div class="hero-slide-content hero-slide--hidden" data-slide="1">
+                    <h1 class="hero-heading hero-heading--large">
+                        PROFESIONÁLNÍ<br>
+                        <span class="text-magenta font-magistral">POLEPY</span> A<br>
+                        DETAILING AUT
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Bar -->
+        <div class="info-bar">
+            <div class="info-bar-inner">
+                <div class="info-bar-item">
+                    <img src="img/place.svg" alt="Adresa" class="info-bar-icon">
+                    <div>
+                        <h3>Adresa</h3>
+                        <p>Heršpická 814/5a, M-Palác podzemní garáže</p>
+                    </div>
+                </div>
+
+                <div class="info-bar-divider"></div>
+
+                <div class="info-bar-item">
+                    <img src="img/time.svg" alt="Otevírací doba" class="info-bar-icon">
+                    <div>
+                        <h3>Otevírací doba</h3>
+                        <p>Po-Pá: 8:00-17:00</p>
+                    </div>
+                </div>
+
+                <div class="info-bar-divider"></div>
+
+                <div class="info-bar-item">
+                    <img src="img/star_line.svg" alt="Hodnocení" class="info-bar-icon">
+                    <div>
+                        <h3>Hodnocení</h3>
+                        <div class="info-bar-rating">
+                            <span>4,6</span>
+                            <div class="info-bar-stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="sluzby" class="py-20 px-4 sm:px-8 bg-[#121212]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="section-title font-magistral">SLUŽBY</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 - Hloubkové čištění interiéru -->
+                <div class="services-card relative overflow-hidden rounded-lg">
+                    <img src="img/01.jpg" alt="Hloubkové čištění interiéru" class="services-card-img">
+                    <div class="services-card-overlay"></div>
+                    <div class="services-card-content">
+                        <span class="services-card-number font-magistral">01</span>
+                        <h3 class="services-card-title font-magistral">HLOUBKOVÉ ČIŠTĚNÍ<br>INTERIÉRU</h3>
+                        <ul class="services-card-list">
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Ruční mytí karoserie</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Čištění disků a podběhů</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Sušení karoserie</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Impregnace pneumatik</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Hloubkové vysávání interiéru a kufru</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Čištění plastů interiéru</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Mytí a leštění oken zevnitř</li>
+                        </ul>
+                        <p class="services-card-price font-magistral">od  2 200 Kč</p>
+                        <a href="#kontakt" class="services-card-btn font-futura">CHCI VYČISTIT INTERIÉR</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 - Profesionální ruční mytí -->
+                <div class="services-card relative overflow-hidden rounded-lg">
+                    <img src="img/02.jpg" alt="Profesionální ruční mytí" class="services-card-img">
+                    <div class="services-card-overlay"></div>
+                    <div class="services-card-content">
+                        <span class="services-card-number font-magistral">02</span>
+                        <h3 class="services-card-title font-magistral">PROFESIONÁLNÍ<br>RUČNÍ MYTÍ</h3>
+                        <ul class="services-card-list">
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Ruční mytí karoserie</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Čištění disků a podběhů</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Sušení karoserie</li>
+                            <li><img src="img/check.svg" alt="✓" class="services-check"> Impregnace pneumatik</li>
+                        </ul>
+                        <p class="services-card-price font-magistral">od  980 Kč</p>
+                        <a href="#kontakt" class="services-card-btn font-futura">CHCI RUČNÍ MYTÍ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rezervace Section -->
+    <section id="rezervace" class="py-20 px-4 sm:px-8 bg-[#121212]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="section-title font-magistral">REZERVACE</h2>
+            </div>
+
+            <div class="rezervace-box">
+                <div class="rezervace-grid">
+                    <!-- 01 Typ vozu -->
+                    <div class="rezervace-col">
+                        <h3 class="rezervace-heading font-magistral"><span class="text-magenta font-magistral">01</span> TYP VOZU</h3>
+                        <p class="rezervace-subtext font-futura">Vyberte, prosím, kategorii vašeho auta:</p>
+                        <div class="rezervace-vehicles">
+                            <label class="rezervace-vehicle">
+                                <img src="img/Hatchback.svg" alt="Hatchback" class="rezervace-vehicle-icon">
+                                <span class="font-futura">Hatchback</span>
+                                <input type="radio" name="vehicle" value="hatchback">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle">
+                                <img src="img/Sedan.svg" alt="Sedan" class="rezervace-vehicle-icon">
+                                <span class="font-futura">Sedan</span>
+                                <input type="radio" name="vehicle" value="sedan">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle">
+                                <img src="img/SUV.svg" alt="SUV" class="rezervace-vehicle-icon">
+                                <span class="font-futura">SUV</span>
+                                <input type="radio" name="vehicle" value="suv">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle">
+                                <img src="img/Van.svg" alt="Van/MPV" class="rezervace-vehicle-icon">
+                                <span class="font-futura">Van/ MPV</span>
+                                <input type="radio" name="vehicle" value="van">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                            <label class="rezervace-vehicle">
+                                <img src="img/Moto.svg" alt="Moto" class="rezervace-vehicle-icon">
+                                <span class="font-futura">Moto</span>
+                                <input type="radio" name="vehicle" value="moto">
+                                <span class="rezervace-radio"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 02 Rozsah služeb -->
+                    <div class="rezervace-col">
+                        <h3 class="rezervace-heading font-magistral"><span class="text-magenta font-magistral">02</span> ROZSAH SLUŽEB</h3>
+                        <p class="rezervace-subtext font-futura">Zvolte služby, o které máte zájem:</p>
+                        <div class="rezervace-services">
+                            <label class="rezervace-service font-futura">
+                                <input type="checkbox" name="service" value="rucni-myti">
+                                <span class="rezervace-checkbox"></span>
+                                Ruční mytí vozu
+                            </label>
+                            <label class="rezervace-service font-futura">
+                                <input type="checkbox" name="service" value="cisteni-interieru">
+                                <span class="rezervace-checkbox"></span>
+                                Čištění interiéru
+                            </label>
+                            <label class="rezervace-service font-futura">
+                                <input type="checkbox" name="service" value="polepy">
+                                <span class="rezervace-checkbox"></span>
+                                Polepy aut
+                            </label>
+                            <label class="rezervace-service font-futura">
+                                <input type="checkbox" name="service" value="ppf">
+                                <span class="rezervace-checkbox"></span>
+                                Ochranné fólie (PPF)
+                            </label>
+                            <label class="rezervace-service font-futura">
+                                <input type="checkbox" name="service" value="renovace-laku">
+                                <span class="rezervace-checkbox"></span>
+                                Renovace laku
+                            </label>
+                            <label class="rezervace-service font-futura">
+                                <input type="checkbox" name="service" value="keramika">
+                                <span class="rezervace-checkbox"></span>
+                                Keramická ochrana laku
+                            </label>
+                            <label class="rezervace-service font-futura">
+                                <input type="checkbox" name="service" value="kuze">
+                                <span class="rezervace-checkbox"></span>
+                                Opravy kůže (sedačky, interiér)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Extra požadavky -->
+                    <div class="rezervace-col rezervace-col--extra">
+                        <p class="rezervace-extra-text font-futura">Máte speciální požadavek nebo přání? Napište nám detaily – rádi vám připravíme <strong>individuální řešení.</strong></p>
+                        <textarea class="rezervace-textarea font-futura" placeholder="Extra požadavky" rows="6"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 Kontakt -->
+            <div class="kontakt-section">
+                <h3 class="rezervace-heading font-magistral"><span class="text-magenta font-magistral">03</span> KONTAKT</h3>
+                <div class="kontakt-inputs">
+                    <input type="text" placeholder="Jméno" class="kontakt-input font-futura">
+                    <input type="tel" placeholder="Telefon" class="kontakt-input font-futura">
+                    <input type="email" placeholder="E-mail" class="kontakt-input font-futura">
+                </div>
+                <div class="kontakt-footer">
+                    <div class="kontakt-info">
+                        <p class="kontakt-note font-futura">
+                            <img src="img/arrow.svg" alt="" class="kontakt-arrow"> Po odeslání formuláře vás budeme co nejdříve kontaktovat s <strong>cenovou nabídkou</strong> a návrhem realizace.
+                        </p>
+                        <label class="kontakt-consent font-futura">
+                            <input type="checkbox" name="consent">
+                            <span class="rezervace-checkbox"></span>
+                            Souhlasím se <a href="#" class="text-magenta underline">zpracováním osobních údajů.</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="kontakt-submit font-magistral">
+                        <img src="img/send.svg" alt="Odeslat" class="kontakt-send-icon">
+                        ODESLAT
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="pt-20 px-0 bg-[#121212]"> <!-- Removed padding to make cards go to edges -->
+        <div class="max-w-full mx-auto"> <!-- Adjusted max-width to full -->
+            <div class="text-center mb-16">
+                <h2 class="section-title italic font-magistral">
+                    RECENZE
+                </h2>
+            </div>
+
+            <div class="portfolio-slider">
+                <div class="portfolio-track flex gap-0"> <!-- Removed gap to make cards touch edges -->
+                    <div class="portfolio-item" data-full="img/PorscheFull.jpg">
+                        <img src="img/BMWM2.jpg" alt="BMW M2" class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-profile">
+                                <div class="review-avatar">S</div>
+                                <div class="review-profile-info">
+                                    <h3 class="font-magistral review-name">Stanislav Mihula</h3>
+                                    <span class="font-futura review-date">před 8 hodinami</span>
+                                </div>
+                            </div>
+                            <p class="font-futura review-text">Na auto aplikovali PPF fólie čiré na předek vozu, barevný polep PPF fólie na střechu (černá) a na zbytek vozu prověřenou keramickou ochranu. Ochranná PPF fólie se chová perfektně. Auto je prakticky pořád čisté a lesklé.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-full="img/GazzeleFull.jpg">
+                        <img src="img/helicopter-2.png" alt="Helicopter" class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-profile">
+                                <div class="review-avatar">E</div>
+                                <div class="review-profile-info">
+                                    <h3 class="font-magistral review-name">Edman</h3>
+                                    <span class="font-futura review-date">před 8 lety</span>
+                                </div>
+                            </div>
+                            <p class="font-futura review-text">Spokojenost. Dobře umyté, vyleštěné i vytepované. Dobrá služba za adekvátní cenu.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-full="img/bmw2full.jpg">
+                        <img src="img/bmw-3.png" alt="BMW" class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-profile">
+                                <div class="review-avatar">M</div>
+                                <div class="review-profile-info">
+                                    <h3 class="font-magistral review-name">Martin Novák</h3>
+                                    <span class="font-futura review-date">před 2 měsíci</span>
+                                </div>
+                            </div>
+                            <p class="font-futura review-text">Ruční mytí, individuální polep auta včetně tonování skel a ochranné PPF fólie. Naprostá spokojenost s výsledkem.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-full="img/ferrariFull.JPG">
+                        <img src="img/lexus.jpg" alt="Lexus" class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-profile">
+                                <div class="review-avatar">J</div>
+                                <div class="review-profile-info">
+                                    <h3 class="font-magistral review-name">Jakub Zogata</h3>
+                                    <span class="font-futura review-date">před 3 měsíci</span>
+                                </div>
+                            </div>
+                            <p class="font-futura review-text">Proběhlo kompletní mytí, voskování, důkladné vyčištění sedaček i celého interiéru. Auto teď vypadá jako nové – lak krásně lesklý, interiér čistý a svěží.</p>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item" data-full="img/MotorCycle.jpg">
+                        <img src="img/motor-5.png" alt="Motorcycle" class="portfolio-image">
+                        <div class="portfolio-overlay"></div>
+                        <div class="portfolio-hover-content">
+                            <div class="review-stars">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <div class="review-profile">
+                                <div class="review-avatar">P</div>
+                                <div class="review-profile-info">
+                                    <h3 class="font-magistral review-name">Petr Šimek</h3>
+                                    <span class="font-futura review-date">před 1 rokem</span>
+                                </div>
+                            </div>
+                            <p class="font-futura review-text">Renovace, leštění laku a keramická ochrana aplikována na veteránskou motorku. Perfektní práce, doporučuji.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="mapa" class="map-section">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2608.2341727509247!2d16.601825476770568!3d49.17714287822177!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471295a8108a72bd%3A0x2a4faa794635882e!2zSGVyxaFwaWNrw6EgODE0LzVhLCA2MzkgMDAgQnJuby1zdMWZZWQtxaB0w73FmWljZQ!5e0!3m2!1scs!2scz!4v1775202733688!5m2!1scs!2scz" width="100%" height="450" style="border:0; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="kontakt">
+        <div class="footer-main">
+            <div class="footer-logos">
+                <img src="img/logo.png" alt="Wash & Wrap" class="footer-logo">
+                <img src="img/ceramic_pro_logo_fb_social.png" alt="Ceramic Pro" class="footer-logo-ceramic">
+            </div>
+            <div class="footer-contact">
+                <p class="font-futura text-sm uppercase text-white tracking-wider">Zavolejte a objednejte se 24/7</p>
+                <a href="tel:+420603298838" class="footer-phone font-magistral">+420 603 298 838</a>
+            </div>
+            <div class="footer-info">
+                <p class="font-futura text-white text-sm"><strong>Otevírací doba:</strong> Po-Pá 8:00-17:00</p>
+                <p class="font-futura text-white text-sm">Garáže M-Palác, Heršpická 814/5a Brno</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="footer-social-link">
+                    <i class="fab fa-instagram text-sm"></i>
+                </a>
+                <a href="#" class="footer-social-link">
+                    <i class="fab fa-facebook-f text-sm"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="font-futura text-neutral-500 text-xs">© 2026 Wash&Wrap. Všechna práva vyhrazena.</p>
+        </div>
+    </footer>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox"
+        style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.9); cursor:pointer;">
+        <span id="lightbox-close"
+            style="position:absolute; top:20px; right:35px; color:#fff; font-size:40px; cursor:pointer; z-index:10000;">&times;</span>
+        <img id="lightbox-img"
+            style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:auto; height:auto; max-width:80%; max-height:calc(100% - 40px);">
+    </div>
+
+    <script type="module" src="js/hero-slider.js"></script>
+    <script type="module" src="js/portfolio.js"></script>
+    <script type="module" src="js/hamburger.js"></script>
+    <script type="module" src="js/services.js"></script>
+    <script type="module" src="js/lightbox.js"></script>
+    <script type="module" src="js/timeline.js"></script>
+
+</body>
+
+</html>
