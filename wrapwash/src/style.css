@@ -192,7 +192,71 @@ p, span, a, li, input, textarea, select, button { font-family: 'Futura PT', sans
 @media (max-width: 768px) {
     .hero-background-image { display: none; }
 
-    .portfolio-item .portfolio-hover-content { opacity: 0; pointer-events: none; }
-    .portfolio-item.is-active .portfolio-image { filter: brightness(0.35); }
-    .portfolio-item.is-active .portfolio-hover-content { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    /* Hero text centrovani */
+    .hero-slide-content p {
+        text-align: left;
+    }
+
+    /* Mapa – odsazení od recenzí */
+    .map-section {
+        margin-top: 2.5rem !important;
+    }
+
+    /* === RECENZE NA MOBILU – karty pod sebou, text vždy viditelný === */
+    .portfolio-slider {
+        overflow: visible !important;
+        padding: 0 1rem !important;
+    }
+    .portfolio-track {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    .portfolio-item {
+        width: 100% !important;
+        flex: none !important;
+        height: auto !important;
+        aspect-ratio: unset !important;
+        margin-bottom: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .portfolio-item .portfolio-image {
+        width: 100% !important;
+        height: 200px !important;
+        object-fit: cover !important;
+        filter: none !important;
+        transition: none !important;
+        display: block !important;
+        flex-shrink: 0 !important;
+    }
+    .portfolio-item .portfolio-overlay {
+        display: none !important;
+    }
+    .portfolio-item .portfolio-hover-content {
+        position: static !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: none !important;
+        background-color: #1c1c1c;
+        padding: 1rem 1rem 1.25rem !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        inset: unset !important;
+    }
+    /* Hvězdičky – z absolute na statické */
+    .portfolio-item .portfolio-hover-content > .absolute {
+        position: static !important;
+        margin-bottom: 0.5rem;
+        justify-content: flex-start !important;
+    }
+    /* Avatar řádek – zruš záporný margin z inline stylu */
+    .portfolio-item .portfolio-hover-content > .flex {
+        margin-left: 0 !important;
+    }
+    .portfolio-item .portfolio-hover-content p {
+        font-size: 15px !important;
+    }
 }
