@@ -1,3 +1,5 @@
+﻿@import "tailwindcss";
+
 /* ============================================
    FONTS IMPORT
    ============================================ */
@@ -20,12 +22,12 @@
    ============================================ */
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    @apply overflow-x-hidden;
 }
 
 body {
     font-family: 'Futura PT', sans-serif;
-    overflow-x: hidden;
+    @apply overflow-x-hidden;
 }
 
 /* ============================================
@@ -33,9 +35,7 @@ body {
    ============================================ */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Magistral', sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    letter-spacing: 0.025em;
+    @apply font-extrabold italic tracking-wide;
 }
 
 p, span, a, li, input, textarea, select, button {
@@ -51,9 +51,7 @@ p, span, a, li, input, textarea, select, button {
 
 .font-magistral {
     font-family: 'Magistral', sans-serif !important;
-    font-weight: 800;
-    font-style: italic;
-    letter-spacing: 0.025em;
+    @apply font-extrabold italic tracking-wide;
 }
 
 /* ============================================
@@ -87,45 +85,27 @@ p, span, a, li, input, textarea, select, button {
    NAVIGATION
    ============================================ */
 .site-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 50;
+    @apply fixed top-0 w-full z-50;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.05) 100%);
 }
 
 .nav-inner {
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.75rem 0.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
+    @apply max-w-7xl mx-auto py-3 px-3 flex items-center justify-between gap-2;
 }
 
 .nav-logo img {
-    height: auto;
-    object-fit: contain;
-    width: 70px;
+    @apply h-auto object-contain w-[70px];
 }
 
 .nav-actions {
-    display: flex;
-    align-items: center;
-    gap: 0.25rem;
-    min-width: 0;
+    @apply flex items-center gap-1 min-w-0;
 }
 
 .nav-phone {
     font-family: 'Magistral', sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    letter-spacing: 0.025em;
-    white-space: nowrap;
+    @apply font-extrabold italic tracking-wide whitespace-nowrap;
     background-color: #C31681;
     padding: 6px 8px;
     font-size: clamp(10px, 3vw, 16px);
@@ -133,15 +113,11 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .nav-phone:hover {
-    opacity: 0.9;
+    @apply opacity-90;
 }
 
 .nav-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    border: 1px solid white;
+    @apply flex items-center justify-center shrink-0 border border-white;
     width: 28px;
     height: 28px;
     transition: border-color 0.3s, color 0.3s;
@@ -153,57 +129,50 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .nav-social i {
-    font-size: 0.75rem;
+    @apply text-xs;
 }
 
 @media (min-width: 375px) {
-    .nav-logo img { width: 85px; }
-    .nav-actions { gap: 0.5rem; }
-    .nav-phone { padding: 0.5rem 0.75rem; }
-    .nav-social { width: 2rem; height: 2rem; }
+    .nav-logo img { @apply w-[85px]; }
+    .nav-actions { @apply gap-2; }
+    .nav-phone { @apply px-3 py-2; }
+    .nav-social { @apply w-8 h-8; }
 }
 
 @media (min-width: 425px) {
-    .nav-logo img { width: 100px; }
-    .nav-phone { padding: 0.5rem 1rem; }
+    .nav-logo img { @apply w-[100px]; }
+    .nav-phone { @apply px-4 py-2; }
 }
 
 @media (min-width: 640px) {
-    .nav-inner { padding: 0.75rem 2rem; }
-    .nav-logo img { width: 120px; }
-    .nav-actions { gap: 1rem; }
-    .nav-phone { padding: 0.625rem 1.5rem; }
-    .nav-social { width: 2.25rem; height: 2.25rem; }
-    .nav-social i { font-size: 0.875rem; }
+    .nav-inner { @apply px-8 py-3; }
+    .nav-logo img { @apply w-[120px]; }
+    .nav-actions { @apply gap-4; }
+    .nav-phone { @apply px-6 py-2.5; }
+    .nav-social { @apply w-9 h-9; }
+    .nav-social i { @apply text-sm; }
 }
 
 @media (min-width: 1024px) {
-    .nav-inner { padding-top: 2rem; }
+    .nav-inner { @apply pt-8; }
 }
 
 /* ============================================
    HERO SECTION
    ============================================ */
 .hero-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
+    @apply relative flex flex-col overflow-hidden;
     min-height: 100vh;
     min-height: 100dvh;
 }
 
 .hero-bg {
-    position: absolute;
-    inset: 0;
-    overflow: hidden;
+    @apply absolute inset-0 overflow-hidden;
     background-color: #121212;
 }
 
 .hero-bg > img {
-    position: absolute;
-    width: 75%;
-    height: auto;
+    @apply absolute w-3/4 h-auto;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -215,110 +184,75 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .hero-bg-hidden {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
+    @apply absolute inset-0 opacity-0;
 }
 
 .hero-gradient {
-    position: absolute;
-    inset: 0;
+    @apply absolute inset-0;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.92) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.2) 100%),
                 linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.1) 40%);
 }
 
 .hero-content {
-    position: relative;
-    z-index: 10;
-    flex: 1;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    max-width: 80rem;
-    margin-left: auto;
-    margin-right: auto;
+    @apply relative z-10 flex-1 flex items-center w-full max-w-7xl mx-auto;
     padding: 80px 16px 16px;
 }
 
 .hero-slides {
-    position: relative;
-    width: 100%;
-    padding-bottom: 1rem;
+    @apply relative w-full pb-4;
     max-width: 42rem;
 }
 
 .hero-heading {
-    line-height: 1;
-    margin-bottom: 0.375rem;
+    @apply leading-none mb-1.5;
     font-size: 24px;
 }
 
 .hero-heading--magenta {
     color: #C31681;
-    margin-bottom: 0.625rem;
+    @apply mb-2.5;
 }
 
 .hero-heading--large {
-    line-height: 1;
-    margin-bottom: 6rem;
+    @apply leading-none mb-24;
     font-size: 28px;
 }
 
 .hero-bullets {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    margin-bottom: 0.75rem;
+    @apply flex flex-col gap-1 mb-3;
 }
 
 .hero-bullet {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    @apply flex items-center gap-2;
 }
 
 .hero-bullet span {
     font-family: 'Magistral', sans-serif;
-    font-weight: 800;
-    font-style: italic;
-    letter-spacing: 0.025em;
-    text-transform: uppercase;
-    font-size: 1.25rem;
+    @apply font-extrabold italic tracking-wide uppercase text-xl;
 }
 
 .hero-arrow {
-    flex-shrink: 0;
-    width: 22px;
-    height: 18px;
+    @apply shrink-0 w-[22px] h-[18px];
 }
 
 .hero-description {
     font-family: 'Futura PT', sans-serif;
-    color: #d4d4d4;
-    max-width: 32rem;
+    @apply text-neutral-300 max-w-lg;
     font-size: 16px;
     line-height: 1.55;
 }
 
 .hero-description strong {
-    color: white;
+    @apply text-white;
 }
 
 .hero-slide--hidden {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    pointer-events: none;
+    @apply absolute top-0 left-0 opacity-0 pointer-events-none;
 }
 
 @media (min-width: 640px) {
     .hero-bg > img {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @apply top-0 left-0 w-full h-full object-cover;
         transform: none;
         object-position: center center;
     }
@@ -330,21 +264,21 @@ p, span, a, li, input, textarea, select, button {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.6) 100%);
     }
     .hero-content {
-        align-items: center;
+        @apply items-center;
         padding: 160px 24px 24px;
     }
     .hero-slides {
-        padding-bottom: 0;
+        @apply pb-0;
         margin-left: -33px;
     }
-    .hero-heading { font-size: 36px; margin-bottom: 1rem; }
+    .hero-heading { font-size: 36px; @apply mb-4; }
     .hero-heading--large { font-size: 42px; }
-    .hero-heading--magenta { margin-bottom: 1.5rem; }
-    .hero-bullets { gap: 0.5rem; margin-bottom: 1.5rem; }
-    .hero-bullet { gap: 1rem; }
+    .hero-heading--magenta { @apply mb-6; }
+    .hero-bullets { @apply gap-2 mb-6; }
+    .hero-bullet { @apply gap-4; }
     .hero-bullet span { font-size: 26px; }
-    .hero-arrow { width: 1.75rem; height: 22px; }
-    .hero-description { font-size: 18px; margin-bottom: 3.75rem; }
+    .hero-arrow { @apply w-7 h-[22px]; }
+    .hero-description { font-size: 18px; @apply mb-15; }
 }
 
 @media (min-width: 768px) {
@@ -354,7 +288,7 @@ p, span, a, li, input, textarea, select, button {
     .hero-heading { font-size: 42px; }
     .hero-heading--large { font-size: 50px; }
     .hero-bullet span { font-size: 28px; }
-    .hero-arrow { width: 30px; height: 1.5rem; }
+    .hero-arrow { @apply w-[30px] h-6; }
     .hero-description { font-size: 18px; }
 }
 
@@ -367,7 +301,7 @@ p, span, a, li, input, textarea, select, button {
     .hero-heading { font-size: 48px; }
     .hero-heading--large { font-size: 58px; }
     .hero-bullet span { font-size: 28px; }
-    .hero-arrow { width: 30px; height: 1.5rem; }
+    .hero-arrow { @apply w-[30px] h-6; }
     .hero-description { font-size: 18px; }
 }
 
@@ -375,91 +309,73 @@ p, span, a, li, input, textarea, select, button {
    INFO BAR
    ============================================ */
 .info-bar {
-    position: relative;
-    z-index: 10;
-    padding: 1.25rem 1rem;
+    @apply relative z-10 px-4 py-5;
     background-color: #212121;
 }
 
 .info-bar-inner {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 0 0.5rem;
+    @apply w-full flex flex-col items-start gap-4 px-2;
 }
 
 .info-bar-item {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
     gap: 14px;
 }
 
 .info-bar-icon {
-    flex-shrink: 0;
-    width: 2.25rem;
-    height: 2.25rem;
+    @apply shrink-0 w-9 h-9;
 }
 
 .info-bar-item h3 {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: white;
+    @apply uppercase tracking-wider text-white;
     font-size: 17px;
 }
 
 .info-bar-item p,
 .info-bar-rating span {
     font-family: 'Futura PT', sans-serif;
-    color: #d4d4d4;
+    @apply text-neutral-300;
     font-size: 15px;
 }
 
 .info-bar-divider {
-    display: none;
+    @apply hidden;
 }
 
 .info-bar-rating {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    @apply flex items-center gap-2;
 }
 
 .info-bar-stars {
-    display: flex;
-    gap: 0.125rem;
+    @apply flex gap-0.5;
 }
 
 .info-bar-stars i {
     color: #C31681;
-    font-size: 1rem;
+    @apply text-base;
 }
 
 @media (min-width: 640px) {
-    .info-bar { padding: 1.25rem 1.5rem; }
-    .info-bar-inner { align-items: center; gap: 1rem; }
-    .info-bar-item { gap: 1rem; }
-    .info-bar-icon { width: 2.25rem; height: 2.25rem; }
+    .info-bar { @apply px-6 py-5; }
+    .info-bar-inner { @apply items-center gap-4; }
+    .info-bar-item { @apply gap-4; }
+    .info-bar-icon { @apply w-9 h-9; }
     .info-bar-item h3 { font-size: 18px; }
     .info-bar-item p, .info-bar-rating span { font-size: 14px; }
-    .info-bar-stars i { font-size: 1rem; }
+    .info-bar-stars i { @apply text-base; }
 }
 
 @media (min-width: 768px) {
     .info-bar { padding: 28px 40px; }
     .info-bar-inner {
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
+        @apply flex-row items-center justify-center;
         gap: 48px;
     }
-    .info-bar-icon { width: 3rem; height: 3rem; }
+    .info-bar-icon { @apply w-12 h-12; }
     .info-bar-item h3 { font-size: 21px; }
-    .info-bar-item p, .info-bar-rating span { font-size: 1rem; }
+    .info-bar-item p, .info-bar-rating span { @apply text-base; }
     .info-bar-divider {
-        display: block;
-        width: 1px;
+        @apply block w-px;
         height: 48px;
         background-color: #343434;
     }
@@ -475,87 +391,53 @@ p, span, a, li, input, textarea, select, button {
    NEW SERVICES CARDS
    ============================================ */
 .services-card {
-    position: relative;
-    display: flex;
+    @apply relative flex;
 }
 
 .services-card-img {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    @apply absolute inset-0 w-full h-full object-cover;
 }
 
 .services-card-overlay {
-    position: absolute;
-    inset: 0;
+    @apply absolute inset-0;
     background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.75) 100%);
 }
 
 .services-card-content {
-    position: relative;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
+    @apply relative z-10 flex flex-col items-center text-center w-full;
     padding: 24px 20px 28px;
 }
 
 .services-card-number {
     color: #C31681;
-    font-size: 1.5rem;
-    margin-bottom: 0.25rem;
+    @apply text-2xl mb-1;
 }
 
 .services-card-title {
-    font-size: 1.5rem;
-    color: white;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    @apply text-2xl text-white uppercase mb-4;
     line-height: 1.15;
 }
 
 .services-card-list {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 0.375rem;
-    flex-grow: 1;
+    @apply list-none p-0 flex flex-col gap-1.5 grow;
     margin: 0 0 20px 0;
 }
 
 .services-card-list li {
     font-family: 'Futura PT', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 0.625rem;
-    font-size: 15px;
-    color: #e5e5e5;
+    @apply flex items-center gap-2.5 text-[15px] text-neutral-200;
 }
 
 .services-check {
-    width: 1rem;
-    height: 1rem;
-    flex-shrink: 0;
+    @apply w-4 h-4 shrink-0;
 }
 
 .services-card-price {
-    font-size: 1.5rem;
-    color: white;
-    font-style: italic;
-    margin-bottom: 1rem;
+    @apply text-2xl text-white italic mb-4;
 }
 
 .services-card-btn {
-    display: inline-block;
-    color: white;
-    font-weight: 600;
-    text-transform: uppercase;
-    text-decoration: none;
+    @apply inline-block text-white font-semibold uppercase no-underline;
     background-color: #C31681;
     padding: 12px 32px;
     font-size: 14px;
@@ -564,38 +446,35 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .services-card-btn:hover {
-    opacity: 0.9;
+    @apply opacity-90;
 }
 
 @media (min-width: 768px) {
     .services-card-content { padding: 40px 36px 36px; }
-    .services-card-number { font-size: 32px; }
-    .services-card-title { font-size: 34px; }
-    .services-card-list li { font-size: 1.125rem; }
-    .services-card-list { gap: 0.5rem; }
-    .services-check { width: 1.25rem; height: 1.25rem; }
-    .services-card-price { font-size: 32px; }
-    .services-card-btn { padding: 1rem 3rem; font-size: 1.125rem; }
+    .services-card-number { @apply text-[32px]; }
+    .services-card-title { @apply text-[34px]; }
+    .services-card-list li { @apply text-lg; }
+    .services-card-list { @apply gap-2; }
+    .services-check { @apply w-5 h-5; }
+    .services-card-price { @apply text-[32px]; }
+    .services-card-btn { @apply px-12 py-4 text-lg; }
 }
 
 /* ============================================
    REZERVACE SECTION
    ============================================ */
 .rezervace-box {
-    border: 1px solid #262626;
+    @apply border border-neutral-800;
     background-color: #212121;
     padding: 32px 20px;
 }
 
 .rezervace-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    @apply grid grid-cols-1 gap-8;
 }
 
 .rezervace-heading {
-    color: white;
-    margin-bottom: 0.5rem;
+    @apply text-white mb-2;
     font-size: 26px;
 }
 
@@ -604,36 +483,26 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .rezervace-subtext {
-    margin-bottom: 1.25rem;
+    @apply mb-5;
     font-size: 17px;
     color: #aaa;
 }
 
 .rezervace-vehicles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
+    @apply grid grid-cols-3 gap-2;
 }
 
 .rezervace-vehicle {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.375rem;
-    cursor: pointer;
-    font-size: 0.75rem;
+    @apply flex flex-col items-center gap-1.5 cursor-pointer text-xs;
     color: #ccc;
 }
 
 .rezervace-vehicle input[type="radio"] {
-    display: none;
+    @apply hidden;
 }
 
 .rezervace-radio {
-    width: 18px;
-    height: 18px;
-    border-radius: 9999px;
-    position: relative;
+    @apply w-[18px] h-[18px] rounded-full relative;
     border: 2px solid #555;
     transition: border-color 0.2s;
 }
@@ -644,8 +513,7 @@ p, span, a, li, input, textarea, select, button {
 
 .rezervace-vehicle input[type="radio"]:checked ~ .rezervace-radio::after {
     content: '';
-    position: absolute;
-    border-radius: 9999px;
+    @apply absolute rounded-full;
     top: 3px;
     left: 3px;
     width: 8px;
@@ -654,37 +522,27 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .rezervace-vehicle-icon {
-    object-fit: contain;
+    @apply object-contain;
     width: 110px;
     height: 68px;
     filter: brightness(0) saturate(100%) invert(18%) sepia(90%) saturate(4500%) hue-rotate(310deg) brightness(95%) contrast(100%);
 }
 
 .rezervace-services {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    @apply flex flex-col gap-3;
 }
 
 .rezervace-service {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    cursor: pointer;
-    font-size: 15px;
+    @apply flex items-center gap-3 cursor-pointer text-[15px];
     color: #ddd;
 }
 
 .rezervace-service input[type="checkbox"] {
-    display: none;
+    @apply hidden;
 }
 
 .rezervace-checkbox {
-    width: 18px;
-    height: 18px;
-    border-radius: 9999px;
-    flex-shrink: 0;
-    position: relative;
+    @apply w-[18px] h-[18px] rounded-full shrink-0 relative;
     border: 2px solid #555;
     transition: border-color 0.2s;
 }
@@ -697,8 +555,7 @@ p, span, a, li, input, textarea, select, button {
 .rezervace-service input[type="checkbox"]:checked ~ .rezervace-checkbox::after,
 .rezervace-service:has(input[type="checkbox"]:checked) .rezervace-checkbox::after {
     content: '';
-    position: absolute;
-    border-radius: 9999px;
+    @apply absolute rounded-full;
     top: 3px;
     left: 3px;
     width: 8px;
@@ -707,22 +564,17 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .rezervace-extra-text {
-    font-size: 1.125rem;
-    margin-bottom: 1rem;
+    @apply text-lg mb-4;
     color: #ddd;
     line-height: 1.5;
 }
 
 .rezervace-col--extra {
-    margin-top: 2.5rem;
+    @apply mt-10;
 }
 
 .rezervace-textarea {
-    width: 100%;
-    font-size: 17px;
-    resize: none;
-    border-radius: 0.25rem;
-    padding: 0.75rem 1rem;
+    @apply w-full text-[17px] resize-none rounded p-3 px-4;
     min-height: 140px;
     background-color: #212121;
     border: 2px solid #979797;
@@ -731,48 +583,40 @@ p, span, a, li, input, textarea, select, button {
 
 .rezervace-textarea::placeholder {
     color: #888;
-    font-size: 17px;
+    @apply text-[17px];
 }
 
 .rezervace-textarea:focus {
-    outline: none;
+    @apply outline-none;
     border-color: #C31681;
 }
 
 @media (min-width: 768px) {
-    .rezervace-box { padding: 2.25rem; }
+    .rezervace-box { @apply p-9; }
     .rezervace-grid {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 2.5rem;
+        @apply grid-cols-3 gap-10;
     }
     .rezervace-heading { font-size: 28px; }
     .rezervace-heading span { font-size: 34px; }
-    .rezervace-subtext { font-size: 1.125rem; }
-    .rezervace-vehicle { font-size: 0.875rem; }
+    .rezervace-subtext { @apply text-lg; }
+    .rezervace-vehicle { @apply text-sm; }
     .rezervace-vehicle-icon { width: 120px; height: 74px; }
-    .rezervace-service { font-size: 1rem; }
+    .rezervace-service { @apply text-base; }
 }
 
 /* ============================================
    KONTAKT SECTION (inside rezervace box)
    ============================================ */
 .kontakt-section {
-    margin-top: 2.5rem;
-    padding-top: 2rem;
+    @apply mt-10 pt-8;
 }
 
 .kontakt-inputs {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
-    margin-top: 1.25rem;
-    margin-bottom: 1.5rem;
+    @apply grid grid-cols-1 gap-3 mt-5 mb-6;
 }
 
 .kontakt-input {
-    width: 100%;
-    font-size: 15px;
-    border-radius: 0;
+    @apply w-full text-[15px] rounded-none;
     background-color: transparent;
     border: 2px solid #555;
     color: #ccc;
@@ -784,31 +628,26 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .kontakt-input:focus {
-    outline: none;
+    @apply outline-none;
     border-color: #C31681;
 }
 
 .kontakt-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    @apply flex flex-col gap-6;
 }
 
 .kontakt-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
+    @apply flex flex-col gap-3;
 }
 
 .kontakt-note {
-    font-size: 15px;
+    @apply text-[15px];
     color: #bbb;
     line-height: 1.5;
 }
 
 .kontakt-arrow {
-    display: inline-block;
-    flex-shrink: 0;
+    @apply inline-block shrink-0;
     width: 22px;
     height: 18px;
     vertical-align: middle;
@@ -816,21 +655,16 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .kontakt-note strong {
-    color: white;
-    font-style: italic;
+    @apply text-white italic;
 }
 
 .kontakt-consent {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    cursor: pointer;
-    font-size: 16px;
+    @apply flex items-center gap-3 cursor-pointer text-[16px];
     color: #bbb;
 }
 
 .kontakt-consent input[type="checkbox"] {
-    display: none;
+    @apply hidden;
 }
 
 .kontakt-consent input[type="checkbox"]:checked ~ .rezervace-checkbox,
@@ -841,8 +675,7 @@ p, span, a, li, input, textarea, select, button {
 .kontakt-consent input[type="checkbox"]:checked ~ .rezervace-checkbox::after,
 .kontakt-consent:has(input[type="checkbox"]:checked) .rezervace-checkbox::after {
     content: '';
-    position: absolute;
-    border-radius: 9999px;
+    @apply absolute rounded-full;
     top: 3px;
     left: 3px;
     width: 8px;
@@ -851,15 +684,7 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .kontakt-submit {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
-    color: white;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    cursor: pointer;
-    border: none;
+    @apply flex items-center justify-center gap-3 text-white uppercase tracking-wider cursor-pointer border-none;
     background-color: #C31681;
     padding: 16px 40px;
     font-size: 18px;
@@ -867,31 +692,27 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .kontakt-submit:hover {
-    opacity: 0.9;
+    @apply opacity-90;
 }
 
 .kontakt-send-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+    @apply w-6 h-6;
     filter: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(500%) hue-rotate(280deg) brightness(103%) contrast(96%);
 }
 
 @media (min-width: 768px) {
     .kontakt-inputs {
-        grid-template-columns: repeat(3, 1fr);
+        @apply grid-cols-3;
     }
     .kontakt-footer {
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: space-between;
+        @apply flex-row items-end justify-between;
     }
     .kontakt-submit {
         padding: 18px 50px;
         font-size: 20px;
     }
     .kontakt-send-icon {
-        width: 1.75rem;
-        height: 1.75rem;
+        @apply w-7 h-7;
     }
 }
 
@@ -903,12 +724,12 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .hero-slide-content.fade-out {
-    opacity: 0;
+    @apply opacity-0;
     transform: translateY(20px);
 }
 
 .hero-slide-content.fade-in {
-    opacity: 1;
+    @apply opacity-100;
     transform: translateY(0);
 }
 
@@ -917,61 +738,47 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .hero-background-image.fade-out {
-    opacity: 0;
+    @apply opacity-0;
 }
 
 .hero-background-image.fade-in {
-    opacity: 1;
+    @apply opacity-100;
 }
 
 /* ============================================
    SECTION LABELS & TITLES
    ============================================ */
 .section-label {
-    position: relative;
-    margin-bottom: 2rem;
+    @apply relative mb-8;
     margin-left: 25px;
 }
 
 .section-label span {
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    color: white;
-    text-transform: uppercase;
-    display: inline-block;
-    position: relative;
+    @apply text-xs tracking-widest text-white uppercase inline-block relative;
     padding-bottom: 8px;
 }
 
 .section-label span::after {
     content: '';
-    position: absolute;
-    left: -15px;
-    bottom: 0;
-    width: 50%;
+    @apply absolute left-[-15px] bottom-0 w-1/2;
     height: 3px;
     background-color: #C31681;
 }
 
 .section-label span::before {
     content: '';
-    position: absolute;
-    left: -15px;
-    bottom: 0;
+    @apply absolute left-[-15px] bottom-0;
     width: 3px;
     height: 18px;
     background-color: #C31681;
 }
 
 .section-underline {
-    display: none;
+    @apply hidden;
 }
 
 .section-title {
-    position: relative;
-    font-weight: 900;
-    line-height: 1.25;
-    margin-bottom: 1rem;
+    @apply relative font-black leading-tight mb-4;
     font-size: clamp(2.5rem, 5vw, 4.5rem);
 }
 
@@ -979,31 +786,23 @@ p, span, a, li, input, textarea, select, button {
    PORTFOLIO SECTION
    ============================================ */
 .portfolio-slider {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+    @apply relative overflow-hidden w-full;
 }
 
 .portfolio-track {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    width: 100%;
+    @apply flex justify-start flex-nowrap w-full;
     gap: 0;
 }
 
 .portfolio-item {
-    position: relative;
-    cursor: pointer;
+    @apply relative cursor-pointer;
     flex: 1 1 0;
     width: 0;
     aspect-ratio: 1 / 1;
 }
 
 .portfolio-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    @apply w-full h-full object-cover;
 }
 
 .portfolio-item:hover .portfolio-image {
@@ -1012,8 +811,7 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .portfolio-overlay {
-    position: absolute;
-    inset: 0;
+    @apply absolute inset-0;
     transition: background-color 0.5s ease;
 }
 
@@ -1022,16 +820,7 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .portfolio-hover-content {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    pointer-events: none;
-    opacity: 0;
-    z-index: 10;
+    @apply absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10;
     padding: 20px 16px;
     transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateY(6px);
@@ -1039,8 +828,7 @@ p, span, a, li, input, textarea, select, button {
 
 .portfolio-item:hover .portfolio-hover-content,
 .portfolio-item.is-active .portfolio-hover-content {
-    opacity: 1;
-    pointer-events: auto;
+    @apply opacity-100 pointer-events-auto;
     transform: translateY(0);
 }
 
@@ -1049,9 +837,7 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .review-stars {
-    position: absolute;
-    display: flex;
-    gap: 0.25rem;
+    @apply absolute flex gap-1;
     top: 16px;
     right: 16px;
 }
@@ -1062,21 +848,12 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .review-profile {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.75rem;
+    @apply flex items-center gap-3 mb-3;
     margin-left: -56px;
 }
 
 .review-avatar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 9999px;
-    color: white;
-    font-weight: 700;
-    flex-shrink: 0;
+    @apply flex items-center justify-center rounded-full text-white font-bold shrink-0;
     width: 68px;
     height: 68px;
     background-color: rgba(195, 22, 129, 0.7);
@@ -1084,48 +861,41 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .review-profile-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    @apply flex flex-col items-start;
 }
 
 .review-name {
-    color: white;
-    font-size: 1.125rem;
-    line-height: 1.25;
+    @apply text-white text-lg leading-tight;
 }
 
 .review-date {
-    color: #a3a3a3;
+    @apply text-neutral-400;
     font-size: 13px;
 }
 
 .review-text {
-    color: #d4d4d4;
-    font-style: italic;
-    text-align: left;
+    @apply text-neutral-300 italic text-left;
     font-size: 16px;
     line-height: 1.55;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    @apply px-4;
 }
 
 /* ============================================
    LIGHTBOX
    ============================================ */
 #lightbox {
-    box-sizing: border-box;
+    @apply box-border;
     padding: 15px 0;
 }
 
 #lightbox-img {
     max-width: 80% !important;
     max-height: calc(100% - 100px) !important;
-    object-fit: contain;
+    @apply object-contain;
 }
 
 #lightbox-close {
-    user-select: none;
+    @apply select-none;
     -webkit-tap-highlight-color: transparent;
 }
 
@@ -1133,14 +903,12 @@ p, span, a, li, input, textarea, select, button {
    MAP SECTION
    ============================================ */
 .map-section {
-    position: relative;
-    width: 100%;
+    @apply relative w-full;
     margin-top: -4px;
 }
 
 .map-section iframe {
-    width: 100%;
-    display: block;
+    @apply w-full block;
     height: 450px;
     filter: brightness(0.35);
 }
@@ -1149,8 +917,7 @@ p, span, a, li, input, textarea, select, button {
    FOOTER
    ============================================ */
 .site-footer {
-    position: relative;
-    width: 100%;
+    @apply relative w-full;
     background: rgba(18, 18, 18, 0.85);
     margin-top: -120px;
     z-index: 10;
@@ -1158,19 +925,13 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .footer-main {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    margin-left: auto;
-    margin-right: auto;
+    @apply flex items-center justify-between gap-8 mx-auto;
     max-width: 1200px;
     padding: 28px 40px;
 }
 
 .footer-logos {
-    display: flex;
-    align-items: center;
+    @apply flex items-center;
     gap: 70px;
 }
 
@@ -1185,19 +946,18 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .footer-contact {
-    display: flex;
-    flex-direction: column;
+    @apply flex flex-col;
 }
 
 .footer-phone {
-    color: #C31681;
-    text-decoration: none;
+    @apply text-white no-underline;
     font-size: 22px;
+    color: #C31681;
     transition: color 0.2s;
 }
 
 .footer-phone:hover {
-    color: white;
+    @apply text-white;
 }
 
 .footer-info p {
@@ -1205,16 +965,11 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .footer-social {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
+    @apply flex items-center gap-3;
 }
 
 .footer-social-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+    @apply flex items-center justify-center text-white;
     width: 36px;
     height: 36px;
     border: 1px solid rgba(255,255,255,0.4);
@@ -1227,7 +982,7 @@ p, span, a, li, input, textarea, select, button {
 }
 
 .footer-bottom {
-    text-align: center;
+    @apply text-center;
     padding: 12px 40px;
     border-top: 1px solid rgba(255,255,255,0.08);
 }
@@ -1236,9 +991,9 @@ p, span, a, li, input, textarea, select, button {
    RESPONSIVE - TABLET & DESKTOP
    ============================================ */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .portfolio-hover-content h3 { font-size: 1.5rem; }
-    .portfolio-hover-content p { font-size: 1rem; }
-    .section-title { font-size: 3rem; }
+    .portfolio-hover-content h3 { @apply text-2xl; }
+    .portfolio-hover-content p { @apply text-base; }
+    .section-title { @apply text-5xl; }
 }
 
 /* ============================================
@@ -1252,42 +1007,32 @@ p, span, a, li, input, textarea, select, button {
     }
 
     .portfolio-slider {
-        overflow-x: visible;
-        padding-left: 2rem;
-        padding-right: 2rem;
+        @apply overflow-x-visible px-8;
     }
 
     .portfolio-track {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @apply flex-col items-center justify-center;
         gap: 0;
     }
 
     .portfolio-item {
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 1.5rem;
-        max-width: 100%;
+        @apply mx-auto mb-6 max-w-full;
         flex-basis: auto;
         width: 800px;
         height: 200px;
     }
 
     .portfolio-item:last-child {
-        margin-bottom: 0;
+        @apply mb-0;
     }
 
     .portfolio-image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        @apply w-full h-full object-cover;
     }
 
     /* Mobile reviews: show overlay on tap via is-active */
     .portfolio-item .portfolio-hover-content {
-        opacity: 0;
-        pointer-events: none;
+        @apply opacity-0 pointer-events-none;
     }
 
     .portfolio-item.is-active .portfolio-image {
@@ -1295,21 +1040,19 @@ p, span, a, li, input, textarea, select, button {
     }
 
     .portfolio-item.is-active .portfolio-hover-content {
-        opacity: 1;
-        pointer-events: auto;
+        @apply opacity-100 pointer-events-auto;
         transform: translateY(0);
     }
 
-    .portfolio-hover-content h3 { font-size: 1rem; }
-    .portfolio-hover-content p { font-size: 0.75rem; }
+    .portfolio-hover-content h3 { @apply text-base; }
+    .portfolio-hover-content p { @apply text-xs; }
 
     .section-label span { font-size: 0.6rem; }
 
     #lightbox-img {
         max-width: 90% !important;
         max-height: 80% !important;
-        width: auto !important;
-        height: auto !important;
+        @apply w-auto! h-auto!;
     }
 
     #lightbox-close {
@@ -1324,23 +1067,20 @@ p, span, a, li, input, textarea, select, button {
     }
 
     .footer-main {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 1rem;
+        @apply flex-col items-center text-center gap-4;
         padding: 20px 16px;
     }
 
     .footer-logos {
-        justify-content: center;
+        @apply justify-center;
     }
 
     .footer-contact {
-        align-items: center;
+        @apply items-center;
     }
 
     .footer-info {
-        text-align: center;
+        @apply text-center;
     }
 
     .map-section iframe {
