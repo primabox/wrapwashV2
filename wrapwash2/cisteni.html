@@ -65,8 +65,8 @@
     </nav>
 
     <!-- Mobile side nav -->
-    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/60 z-[99]"></div>
-    <aside id="mobile-nav" class="fixed top-0 right-0 h-full w-[280px] bg-[#121212] z-[100] flex flex-col">
+    <div id="mobile-nav-overlay" class="fixed inset-0 bg-black/60 z-[99] hidden"></div>
+    <aside id="mobile-nav" class="fixed top-0 right-0 h-full w-[280px] bg-[#121212] z-[100] flex flex-col translate-x-full transition-transform duration-[350ms] ease-[cubic-bezier(.4,0,.2,1)]">
         <button id="mobile-nav-close" class="self-end mt-6 mr-6 text-white" aria-label="Zavřít">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
@@ -526,14 +526,14 @@
 
         function openNav() {
             btn.classList.add('active');
-            mobileNav.classList.add('active');
-            overlay.classList.add('active');
+            mobileNav.classList.remove('translate-x-full');
+            overlay.classList.remove('hidden');
             document.body.style.overflow = 'hidden';
         }
         function closeNav() {
             btn.classList.remove('active');
-            mobileNav.classList.remove('active');
-            overlay.classList.remove('active');
+            mobileNav.classList.add('translate-x-full');
+            overlay.classList.add('hidden');
             document.body.style.overflow = '';
         }
 
