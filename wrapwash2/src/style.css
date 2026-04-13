@@ -32,6 +32,9 @@ p, span, a, li, input, textarea, select, button { font-family: 'Futura PT', sans
 .text-magenta { color: #C31681; }
 .bg-magenta { background-color: #C31681; }
 .border-magenta { border-color: #C31681; }
+.hover\:text-magenta:hover { color: #C31681; }
+.hover\:bg-magenta:hover { background-color: #C31681; }
+.hover\:border-magenta:hover { border-color: #C31681; }
 
 /* ============================================
    NAV - hover & custom breakpoints
