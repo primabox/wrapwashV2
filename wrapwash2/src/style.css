@@ -517,6 +517,39 @@ p, span, a, li, input, textarea, select, button { font-family: 'Futura PT', sans
     }
 }
 
+/* Infobar at standard desktop (1024–1919px, incl. 1440px) */
+@media (min-width: 1024px) and (max-width: 1919px) {
+    .hero-bg > img:first-child {
+        transform: scale(1) !important;
+        object-position: center 0px !important;
+    }
+    #uvod + section {
+        margin-top: -40px !important;
+        padding-top: 1rem !important;
+        padding-bottom: 1rem !important;
+    }
+    #uvod + section .max-w-\[1500px\] {
+        gap: 4rem !important;
+    }
+    #uvod + section img.shrink-0 {
+        width: 48px !important;
+        height: 48px !important;
+    }
+    #uvod + section h3 {
+        font-size: 19px !important;
+        white-space: nowrap;
+    }
+    #uvod + section p,
+    #uvod + section span.font-futura,
+    #uvod + section a.font-futura {
+        font-size: 15px !important;
+        white-space: nowrap;
+    }
+    .infobar-divider {
+        height: 44px !important;
+    }
+}
+
 @media (min-width: 1920px) and (max-width: 2559px) {
     .hero-slide-content h1 {
         font-size: 56px !important;
