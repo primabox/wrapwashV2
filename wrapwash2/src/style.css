@@ -138,6 +138,7 @@ p, span, a, li, input, textarea, select, button { font-family: 'Futura PT', sans
    ============================================ */
 .kontakt-input::placeholder { color: #888; }
 .kontakt-input:focus { outline: none; border-color: #C31681; }
+.kontakt-input.input-error { border-color: #e53e3e !important; }
 .kontakt-consent input[type="checkbox"] { display: none; }
 .kontakt-consent input[type="checkbox"]:checked ~ .rezervace-checkbox,
 .kontakt-consent:has(input[type="checkbox"]:checked) .rezervace-checkbox { border-color: #C31681; }

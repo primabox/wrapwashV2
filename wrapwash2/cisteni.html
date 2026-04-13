@@ -35,7 +35,7 @@
     <!-- Navigation -->
     <nav class="site-nav fixed top-0 w-full z-50">
         <div class="max-w-[1500px] mx-auto py-3 px-3 flex items-center justify-between gap-2 sm:px-8 sm:py-3 lg:pt-8">
-            <a href="index.html" class="nav-logo">
+            <a href="https://washwrap.cz/" class="nav-logo">
                 <img src="img/logo.png" alt="Wash_Wrap" class="h-auto object-contain w-[85px] sm:w-[130px]">
             </a>
             <div class="hidden lg:flex items-center gap-8 text-[20px] tracking-wider font-futura">
@@ -217,7 +217,7 @@
             <!-- Link to premium services on main site -->
             <div class="text-center mt-12">
                 <p class="font-futura text-neutral-400 text-[16px] mb-4">Hledáte keramiku, PPF fólie nebo polepy?</p>
-                <a href="index.html#sluzby" class="inline-block font-magistral uppercase text-white border border-[#C31681] hover:bg-[#C31681] transition-all text-[15px] px-8 py-3 tracking-wider">Zobrazit prémiové služby →</a>
+                <a href="https://washwrap.cz/#sluzby" class="inline-block font-magistral uppercase text-white border border-[#C31681] hover:bg-[#C31681] transition-all text-[15px] px-8 py-3 tracking-wider">Zobrazit prémiové služby →</a>
             </div>
         </div>
     </section>
@@ -337,7 +337,7 @@
                         <label class="kontakt-consent flex items-center gap-3 cursor-pointer text-[16px] text-[#bbb] font-futura">
                             <input type="checkbox" name="consent">
                             <span class="rezervace-checkbox"></span>
-                            Souhlasím se <a href="gdpr.docx" download class="text-magenta underline">zpracováním osobních údajů.</a>
+                            Souhlasím se <a href="gdpr.pdf" download class="text-magenta underline">zpracováním osobních údajů.</a>
                         </label>
                     </div>
                     <button type="submit" class="kontakt-submit flex items-center justify-center gap-3 text-white uppercase tracking-wider cursor-pointer border-none bg-[#C31681] font-magistral" style="padding:16px 40px; font-size:18px;">
@@ -481,7 +481,7 @@
         </div>
         <div class="text-center py-3 px-10 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6" style="border-top:1px solid rgba(255,255,255,0.08);">
             <p class="font-futura text-neutral-500 text-sm">© 2026 Wash&Wrap. Všechna práva vyhrazena.</p>
-            <a href="gdpr.docx" download class="font-futura text-neutral-500 text-sm hover:text-neutral-300 underline">Zásady zpracování osobních údajů</a>
+            <a href="gdpr.pdf" download class="font-futura text-neutral-500 text-sm hover:text-neutral-300 underline">Zásady zpracování osobních údajů</a>
         </div>
     </footer>
 
@@ -495,6 +495,36 @@
         const form = this;
         const msg = document.getElementById('form-message');
         const btn = form.querySelector('button[type="submit"]');
+
+        // --- Validation ---
+        const nameInput  = form.querySelector('[name="name"]');
+        const phoneInput = form.querySelector('[name="phone"]');
+        const emailInput = form.querySelector('[name="email"]');
+
+        const phoneRe = /^[\+]?[0-9\s\-]{9,15}$/;
+        const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+        let valid = true;
+        [nameInput, phoneInput, emailInput].forEach(function(el) { el.classList.remove('input-error'); });
+
+        if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
+            nameInput.classList.add('input-error'); valid = false;
+        }
+        if (!phoneRe.test(phoneInput.value.trim())) {
+            phoneInput.classList.add('input-error'); valid = false;
+        }
+        if (!emailRe.test(emailInput.value.trim())) {
+            emailInput.classList.add('input-error'); valid = false;
+        }
+
+        if (!valid) {
+            msg.className = 'mt-5 p-3 rounded font-futura text-sm text-center text-red-400 bg-red-900/30';
+            msg.textContent = 'Vyplňte prosím správně jméno, telefon a e-mail.';
+            msg.classList.remove('hidden');
+            return;
+        }
+        // --- End validation ---
+
         btn.disabled = true;
         msg.className = 'mt-5 p-3 rounded font-futura text-sm text-center text-neutral-300 bg-neutral-800';
         msg.textContent = 'Odesílám...';
