@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       // Single entry: only build the main cisteni.html
-      input: resolve(__dirname, "cisteni.html"),
+      input: resolve(__dirname, "index.html"),
     },
   },
 });

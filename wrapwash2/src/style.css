@@ -517,19 +517,144 @@ p, span, a, li, input, textarea, select, button { font-family: 'Futura PT', sans
     }
 }
 
+/* ============================================
+   ZOOM-SAFE: 769px–1023px
+   Covers 150% browser zoom on 1440px monitors
+   (effective CSS viewport ≈ 960px)
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1023px) {
+    /* Hero – let content expand beyond 100vh if needed */
+    #uvod {
+        min-height: 100vh !important;
+        height: auto !important;
+    }
+    .hero-content-padding {
+        padding: 180px 32px 50px !important;
+    }
+    .hero-slide-content h1 {
+        font-size: 36px !important;
+    }
+    .hero-slide-content .font-magistral {
+        font-size: 22px !important;
+    }
+    .hero-slide-content p {
+        font-size: 16px !important;
+    }
+
+    /* Infobar – remove overlap, allow wrapping */
+    #uvod + section {
+        margin-top: 0 !important;
+        padding: 1.25rem 1.5rem !important;
+    }
+    #uvod + section .max-w-\[1500px\] {
+        gap: 1.5rem 2.5rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+    }
+    #uvod + section img.shrink-0 {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    #uvod + section h3 {
+        font-size: 17px !important;
+        white-space: normal !important;
+    }
+    #uvod + section p,
+    #uvod + section span.font-futura,
+    #uvod + section a.font-futura {
+        font-size: 14px !important;
+        white-space: normal !important;
+    }
+    .infobar-divider {
+        display: none !important;
+    }
+
+    /* Service cards – reduce height */
+    #sluzby .relative.flex.overflow-hidden {
+        min-height: 600px !important;
+    }
+    #sluzby h3 {
+        font-size: 26px !important;
+        margin-bottom: 1.5rem !important;
+    }
+    #sluzby span.font-magistral {
+        font-size: 26px !important;
+    }
+    #sluzby ul li {
+        font-size: 19px !important;
+    }
+    #sluzby ul li img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    #sluzby p.italic {
+        font-size: 26px !important;
+        margin-bottom: 2rem !important;
+    }
+    #sluzby a.services-card-btn {
+        font-size: 14px !important;
+        padding: 12px 28px !important;
+    }
+
+    /* Rezervace – smaller vehicle icons */
+    .rezervace-vehicle-icon {
+        width: 95px !important;
+        height: 60px !important;
+    }
+
+    /* Portfolio – reduce strip height */
+    .portfolio-track {
+        max-height: 320px !important;
+    }
+
+    /* Footer – tighter layout */
+    #kontakt > div:first-child {
+        gap: 1.5rem !important;
+        padding: 1.25rem 1rem !important;
+    }
+    #kontakt .footer-social-link {
+        width: 40px !important;
+        height: 40px !important;
+    }
+}
+
 /* Infobar at standard desktop (1024–1919px, incl. 1440px) */
 @media (min-width: 1024px) and (max-width: 1919px) {
+    /* Hero – prevent content clipping at higher zoom levels */
+    #uvod {
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+    .hero-content-padding {
+        padding: clamp(140px, 22vh, 300px) 48px 60px !important;
+    }
+    .hero-slide-content h1 {
+        font-size: clamp(40px, 5vw, 58px) !important;
+    }
+    .hero-slide-content .font-magistral {
+        font-size: clamp(22px, 2.5vw, 32px) !important;
+    }
+    .hero-slide-content p {
+        font-size: clamp(15px, 1.5vw, 20px) !important;
+    }
+    .hero-slide-content a[href="#rezervace"] {
+        font-size: 14px !important;
+        padding: 10px 24px !important;
+    }
     .hero-bg > img:first-child {
         transform: scale(1) !important;
         object-position: center 0px !important;
     }
+    /* Infobar */
     #uvod + section {
         margin-top: -40px !important;
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;
     }
     #uvod + section .max-w-\[1500px\] {
-        gap: 4rem !important;
+        gap: 2.5rem !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
     }
     #uvod + section img.shrink-0 {
         width: 48px !important;
@@ -537,20 +662,40 @@ p, span, a, li, input, textarea, select, button { font-family: 'Futura PT', sans
     }
     #uvod + section h3 {
         font-size: 19px !important;
-        white-space: nowrap;
     }
     #uvod + section p,
     #uvod + section span.font-futura,
     #uvod + section a.font-futura {
         font-size: 15px !important;
-        white-space: nowrap;
     }
     .infobar-divider {
         height: 44px !important;
     }
+
+    /* Service cards – scale to viewport */
+    #sluzby .relative.flex.overflow-hidden {
+        min-height: clamp(580px, 70vh, 780px) !important;
+    }
+    #sluzby h3 {
+        font-size: clamp(24px, 3vw, 38px) !important;
+    }
+    #sluzby ul li {
+        font-size: clamp(17px, 2vw, 26px) !important;
+    }
+    #sluzby p.italic {
+        font-size: clamp(24px, 3vw, 36px) !important;
+    }
 }
 
+/* 75% zoom on 1440px → effective viewport ≈ 1920px */
 @media (min-width: 1920px) and (max-width: 2559px) {
+    #uvod {
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+    .hero-content-padding {
+        padding: clamp(220px, 25vh, 360px) 48px 80px !important;
+    }
     .hero-slide-content h1 {
         font-size: 56px !important;
     }
@@ -560,8 +705,12 @@ p, span, a, li, input, textarea, select, button { font-family: 'Futura PT', sans
     .hero-slide-content p {
         font-size: 18px !important;
     }
+    .hero-slide-content a[href="#rezervace"] {
+        font-size: 16px !important;
+        padding: 14px 36px !important;
+    }
     .max-w-\[1500px\] {
-        max-width: 1400px !important;
+        max-width: 1500px !important;
     }
     .max-w-\[1380px\], .max-w-\[1900px\] {
         max-width: 1900px !important;
