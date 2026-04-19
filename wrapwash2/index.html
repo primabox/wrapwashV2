@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wash & Wrap</title>
+    <title>Wash & Wrap | Ruční mytí aut a hloubkové čištění interiéru Brno</title>
+    <meta name="description" content="Šetrné ruční mytí aut a hloubkové čištění interiéru v Brně. 10 let zkušeností, prémiová autokosmetika. Rezervujte si termín online 24/7.">
     <link rel="icon" type="image/png" href="img/logo.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -73,8 +74,11 @@
             <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
         <nav class="flex flex-col mt-6">
+            <a href="#uvod" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">Úvod</a>
+            <a href="#o-nas" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">O nás</a>
             <a href="#sluzby" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">Služby</a>
-            <a href="#portfolio" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">Recenze</a>
+            <a href="cenik.html" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">Ceník</a>
+            <a href="#portfolio" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">Portfolio</a>
             <a href="#rezervace" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">Rezervace</a>
             <a href="#kontakt" class="mobile-nav-link font-futura uppercase tracking-wider text-white text-[17px] px-8 py-4 border-b border-white/10 hover:text-[#C31681] transition">Kontakt</a>
         </nav>
@@ -150,7 +154,7 @@
             <div class="infobar-divider hidden md:block bg-[#343434]" style="height: 60px; width: 2px; flex-shrink: 0;"></div>
             <div class="flex items-center gap-5 md:gap-6">
                 <img src="img/star_line.svg" alt="Hodnocení" class="shrink-0 w-12 h-12 md:w-16 md:h-16">
-                <a href="https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyND7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews" target="_blank" rel="noopener" class="hover:opacity-80 transition-opacity"><div>
+                <a href="https://www.google.com/maps/place/Wash%26Wrap+M-Pal%C3%A1c/@49.1768132,16.6037108,19z/data=!4m8!3m7!1s0x4712961457b2611b:0x920f7d737385bda5!8m2!3d49.176487!4d16.6043086!9m1!1b1!16s%2Fg%2F11bw5tppv3?entry=ttu" target="_blank" rel="noopener" class="hover:opacity-80 transition-opacity"><div>
                     <h3 class="uppercase tracking-wider text-white text-[19px] sm:text-[20px] md:text-[24px] hover:text-[#C31681] transition-colors">Hodnocení</h3>
                     <div class="flex items-center gap-2">
                         <span class="font-futura text-neutral-300 text-[16px] sm:text-[15px] md:text-[18px]">4,6</span>
@@ -276,37 +280,37 @@
                         <p class="font-futura mb-5 text-[18px] text-[#aaa] md:text-xl">Zvolte služby, o které máte zájem:</p>
                         <div class="flex flex-col gap-3">
                             <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
-                                <input type="checkbox" name="service" value="rucni-myti">
+                                <input type="checkbox" name="service[]" value="rucni-myti">
                                 <span class="rezervace-checkbox"></span>
                                 Ruční mytí vozu
                             </label>
                             <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
-                                <input type="checkbox" name="service" value="cisteni-interieru">
+                                <input type="checkbox" name="service[]" value="cisteni-interieru">
                                 <span class="rezervace-checkbox"></span>
                                 Čištění interiéru
                             </label>
                             <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
-                                <input type="checkbox" name="service" value="polepy">
+                                <input type="checkbox" name="service[]" value="polepy">
                                 <span class="rezervace-checkbox"></span>
                                 Polepy aut
                             </label>
                             <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
-                                <input type="checkbox" name="service" value="ppf">
+                                <input type="checkbox" name="service[]" value="ppf">
                                 <span class="rezervace-checkbox"></span>
                                 Ochranné fólie (PPF)
                             </label>
                             <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
-                                <input type="checkbox" name="service" value="renovace-laku">
+                                <input type="checkbox" name="service[]" value="renovace-laku">
                                 <span class="rezervace-checkbox"></span>
                                 Renovace laku
                             </label>
                             <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
-                                <input type="checkbox" name="service" value="keramika">
+                                <input type="checkbox" name="service[]" value="keramika">
                                 <span class="rezervace-checkbox"></span>
                                 Keramická ochrana laku
                             </label>
                             <label class="rezervace-service flex items-center gap-3 cursor-pointer text-[15px] md:text-lg text-[#ddd] font-futura">
-                                <input type="checkbox" name="service" value="kuze">
+                                <input type="checkbox" name="service[]" value="kuze">
                                 <span class="rezervace-checkbox"></span>
                                 Opravy kůže (sedačky, interiér)
                             </label>
@@ -360,7 +364,7 @@
 
             <div class="portfolio-slider relative overflow-hidden w-full max-md:overflow-x-visible max-md:px-8">
                 <div class="portfolio-track flex flex-nowrap w-full gap-0">
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/maps/place/Wash%26Wrap+M-Pal%C3%A1c/@49.1768132,16.6037108,19z/data=!4m8!3m7!1s0x4712961457b2611b:0x920f7d737385bda5!8m2!3d49.176487!4d16.6043086!9m1!1b1!16s%2Fg%2F11bw5tppv3?entry=ttu','_blank')">
                         <img src="img/BMWM2.jpg" alt="BMW M2" class="portfolio-image w-full h-full object-cover">
                         <div class="portfolio-overlay absolute inset-0"></div>
                         <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
@@ -377,7 +381,7 @@
                             <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Na auto aplikovali PPF fólie čiré na předek vozu, barevný polep PPF fólie na střechu (černá) a na zbytek vozu prověřenou keramickou ochranu. Ochranná PPF fólie se chová perfektně.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/maps/place/Wash%26Wrap+M-Pal%C3%A1c/@49.1768132,16.6037108,19z/data=!4m8!3m7!1s0x4712961457b2611b:0x920f7d737385bda5!8m2!3d49.176487!4d16.6043086!9m1!1b1!16s%2Fg%2F11bw5tppv3?entry=ttu','_blank')">
                         <img src="img/helicopter-2.png" alt="Helicopter" class="portfolio-image w-full h-full object-cover">
                         <div class="portfolio-overlay absolute inset-0"></div>
                         <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
@@ -394,7 +398,7 @@
                             <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Spokojenost. Dobře umyté, vyleštěné i vytepované. Dobrá služba za adekvátní cenu.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/maps/place/Wash%26Wrap+M-Pal%C3%A1c/@49.1768132,16.6037108,19z/data=!4m8!3m7!1s0x4712961457b2611b:0x920f7d737385bda5!8m2!3d49.176487!4d16.6043086!9m1!1b1!16s%2Fg%2F11bw5tppv3?entry=ttu','_blank')">
                         <img src="img/bmw-3.png" alt="BMW" class="portfolio-image w-full h-full object-cover">
                         <div class="portfolio-overlay absolute inset-0"></div>
                         <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
@@ -411,7 +415,7 @@
                             <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Ruční mytí, individuální polep auta včetně tonování skel a ochranné PPF fólie. Naprostá spokojenost s výsledkem.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-6 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/maps/place/Wash%26Wrap+M-Pal%C3%A1c/@49.1768132,16.6037108,19z/data=!4m8!3m7!1s0x4712961457b2611b:0x920f7d737385bda5!8m2!3d49.176487!4d16.6043086!9m1!1b1!16s%2Fg%2F11bw5tppv3?entry=ttu','_blank')">
                         <img src="img/lexus.jpg" alt="Lexus" class="portfolio-image w-full h-full object-cover">
                         <div class="portfolio-overlay absolute inset-0"></div>
                         <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
@@ -428,7 +432,7 @@
                             <p class="font-futura text-neutral-300 italic text-left text-[16px] px-4" style="line-height:1.55;">Proběhlo kompletní mytí, voskování, důkladné vyčištění sedaček i celého interiéru. Auto teď vypadá jako nové – lak krásně lesklý.</p>
                         </div>
                     </div>
-                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-0 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/search?client=safari&hs=ERep&sa=X&sca_esv=41b0018ec147afb9&rls=en&sxsrf=ANbL-n42Re-IpKYwl_kkGlT4hxpzgQKGgQ:1775375759485&q=Wash%26Wrap+M-Pal%C3%A1c+Recenze&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDA1MjE3szC3sDQwMLC0NDEyNN7AyPiKUSo8sThDLbwosUDBVzcgMefwwmSFoNTk1Lyq1EWseCQBbwUXGVUAAAA&rldimm=10524768789000994213&tbm=lcl&hl=cs-CZ&ved=2ahUKEwjfqfKLntaTAxU4h_0HHcrVEY4Q9fQKegQISxAG&biw=2048&bih=1136&dpr=2#lkt=LocalPoiReviews','_blank')">
+                    <div class="portfolio-item relative cursor-pointer max-md:mx-auto max-md:mb-0 max-md:max-w-full max-md:w-[800px] max-md:h-[200px]" style="flex:1 1 0; width:0; aspect-ratio:1/1;" onclick="window.open('https://www.google.com/maps/place/Wash%26Wrap+M-Pal%C3%A1c/@49.1768132,16.6037108,19z/data=!4m8!3m7!1s0x4712961457b2611b:0x920f7d737385bda5!8m2!3d49.176487!4d16.6043086!9m1!1b1!16s%2Fg%2F11bw5tppv3?entry=ttu','_blank')">
                         <img src="img/motor-5.png" alt="Motorcycle" class="portfolio-image w-full h-full object-cover">
                         <div class="portfolio-overlay absolute inset-0"></div>
                         <div class="portfolio-hover-content absolute inset-0 flex flex-col items-center justify-center text-center pointer-events-none opacity-0 z-10 p-5">
@@ -558,14 +562,14 @@
 
         function openNav() {
             btn.classList.add('active');
-            mobileNav.classList.remove('translate-x-full');
-            overlay.classList.remove('hidden');
+            mobileNav.classList.add('active');
+            overlay.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
         function closeNav() {
             btn.classList.remove('active');
-            mobileNav.classList.add('translate-x-full');
-            overlay.classList.add('hidden');
+            mobileNav.classList.remove('active');
+            overlay.classList.remove('active');
             document.body.style.overflow = '';
         }
 
