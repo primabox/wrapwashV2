@@ -501,9 +501,10 @@
         const btn = form.querySelector('button[type="submit"]');
 
         // --- Validation ---
-        const nameInput  = form.querySelector('[name="name"]');
-        const phoneInput = form.querySelector('[name="phone"]');
-        const emailInput = form.querySelector('[name="email"]');
+        const nameInput    = form.querySelector('[name="name"]');
+        const phoneInput   = form.querySelector('[name="phone"]');
+        const emailInput   = form.querySelector('[name="email"]');
+        const consentInput = form.querySelector('[name="consent"]');
 
         const phoneRe = /^[\+]?[0-9\s\-]{9,15}$/;
         const emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
@@ -514,16 +515,25 @@
         if (!nameInput.value.trim() || nameInput.value.trim().length < 2) {
             nameInput.classList.add('input-error'); valid = false;
         }
-        if (!phoneRe.test(phoneInput.value.trim())) {
-            phoneInput.classList.add('input-error'); valid = false;
+
+        const phoneOk = phoneRe.test(phoneInput.value.trim());
+        const emailOk = emailRe.test(emailInput.value.trim());
+        if (!phoneOk && !emailOk) {
+            phoneInput.classList.add('input-error');
+            emailInput.classList.add('input-error');
+            valid = false;
         }
-        if (!emailRe.test(emailInput.value.trim())) {
-            emailInput.classList.add('input-error'); valid = false;
+
+        if (!consentInput.checked) {
+            msg.className = 'mt-5 p-3 rounded font-futura text-sm text-center text-red-400 bg-red-900/30';
+            msg.textContent = 'Pro odeslání je nutný souhlas se zpracováním osobních údajů.';
+            msg.classList.remove('hidden');
+            return;
         }
 
         if (!valid) {
             msg.className = 'mt-5 p-3 rounded font-futura text-sm text-center text-red-400 bg-red-900/30';
-            msg.textContent = 'Vyplňte prosím správně jméno, telefon a e-mail.';
+            msg.textContent = 'Vyplňte prosím jméno a alespoň telefon nebo e-mail.';
             msg.classList.remove('hidden');
             return;
         }
